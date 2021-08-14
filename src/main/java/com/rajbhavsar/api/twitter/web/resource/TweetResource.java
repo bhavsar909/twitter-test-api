@@ -20,7 +20,7 @@ public class TweetResource
 	private final SearchTweetService searchTweetService;
 	
 	@GetMapping("/tweets")
-	public ResponseEntity<List<String>> testCrmIntegration(@RequestParam final String hashTag, 
+	public ResponseEntity<List<String>> fetchTweets(@RequestParam final String hashTag, 
 	                                                       @RequestParam final int limit, 
 	                                                       @RequestParam final int offset)
 	{

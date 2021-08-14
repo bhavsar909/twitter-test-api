@@ -30,6 +30,14 @@ logging:
     org.springframework: INFO
     org.hibernate.SQL: DEBUG
     springfox.documentation.spring.web: INFO
+    
+app:
+  scheduler:
+    zone: UTC
+    tweets-sync-scheduler:
+      time: 0 0 0/4 * * *
+      name: TweetsSyncScheduler
+
 
 endpoints:
   health:
