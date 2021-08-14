@@ -1,4 +1,4 @@
-package com.rajbhavsar.api.twitter.twittertestapi;
+package com.rajbhavsar.api.twitter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
