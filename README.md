@@ -32,3 +32,14 @@ INSERT INTO `TwitterTest`.`TweetHashTagMap` (`tweetId`, `tagId`) VALUES ('2', '1
 INSERT INTO `TwitterTest`.`TweetHashTagMap` (`tweetId`, `tagId`) VALUES ('3', '1');
 
 ```
+
+- There is a manual endpoint which can trigger the data sync.
+```
+curl --location --request GET 'localhost:8001/tweets/sync'
+```
+
+- Twitter API to collect tweets
+```
+curl --location --request GET 'https://api.twitter.com/2/tweets/search/recent?query=covid19&tweet.fields=author_id,created_at,entities,text' \
+--header 'Authorization: Bearer AAAAAAAAAAAAAAAAAAAAABewSgEAAAAADT7vv2fpNHg3jZvnACyy5NyVmwc%3DrCC8jOeWN2r0eMdCvUZ62fPAmntyKOMXUbtlZY5s9c4mBzVJkX'
+```
