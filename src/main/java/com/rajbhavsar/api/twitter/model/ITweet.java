@@ -1,13 +1,17 @@
 package com.rajbhavsar.api.twitter.model;
 
+import com.rajbhavsar.api.twitter.delegate.dto.HashTagDTO;
+import com.rajbhavsar.api.twitter.model.impl.HashTag;
+
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 public interface ITweet extends Serializable
 {
-	Long getTweetId();
+	String getTweetId();
 
-	void setTweetId(Long tweetId);
+	void setTweetId(String tweetId);
 
 	String getText();
 
@@ -24,5 +28,9 @@ public interface ITweet extends Serializable
 	Date getDeleteDate();
 
 	void setDeleteDate(final Date deleteDate);
+
+	List<IHashTag> getHashTags();
+
+	void setHashTags(final List<IHashTag> hashTags);
 
 }

@@ -1,5 +1,6 @@
 package com.rajbhavsar.api.twitter.model.impl;
 
+import com.rajbhavsar.api.twitter.delegate.dto.TweetDTO;
 import com.rajbhavsar.api.twitter.model.IHashTag;
 import com.rajbhavsar.api.twitter.model.ITweet;
 import lombok.AllArgsConstructor;
@@ -26,7 +27,7 @@ public class Tweet implements ITweet
 {
 	@Id
 	@Column(unique = true, nullable = false)
-	private Long tweetId;
+	private String tweetId;
 
 	@Column
 	private String text;
@@ -45,5 +46,4 @@ public class Tweet implements ITweet
 			joinColumns = @JoinColumn(name = "tweetId"),
 			inverseJoinColumns = @JoinColumn(name = "tagId"))
 	private List<IHashTag> hashTags;
-
 }

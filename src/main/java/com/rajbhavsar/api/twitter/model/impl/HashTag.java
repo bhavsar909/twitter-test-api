@@ -3,6 +3,7 @@ package com.rajbhavsar.api.twitter.model.impl;
 import com.rajbhavsar.api.twitter.model.IHashTag;
 import com.rajbhavsar.api.twitter.model.ITweet;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -21,6 +22,7 @@ import java.util.List;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @Table(name = "HashTag")
 public class HashTag implements IHashTag
 {
